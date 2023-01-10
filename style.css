@@ -108,6 +108,29 @@
     width: 50px;
 }
 
+
+.tombolWadah{
+    position: relative;
+}
+
+.tombolLampu,
+.musik,
+.tombolBanner,
+.tombolBalon,
+.tombolKue,
+.tiupLilin,
+.tombolKartu,
+.bukaSurat,
+.penutupAkhir
+{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 18%;
+}
+
+
+
 .tombolLampu button,.musik button,.tombolBanner button,
 .tombolBalon button,
 .tombolKue button,
@@ -121,48 +144,11 @@
     border-radius: 100px;   
     background-color: rgb(187, 0, 187);
     color: white;
-    position: absolute;
     bottom: 8%;            
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-.tombolLampu button{
-    left: 44%;
-
-}
-
-.musik button{
-    left: 38%;
-}
-
-.tombolBanner button {
-    left: 43%;
-}
-
-.tombolBalon button {
-    left: 44%;
-}
-
-.tombolKue button{
-    left: 44%;
-}
-
-.tiupLilin button{
-    left: 46%;
-}
-
-.tombolKartu button{
-    left: 41%;
-}
-
-.bukaSurat button{
-    left: 45%;
-}
-
-.penutupAkhir button{
-    left: 46%;
-}
 
 .tombolLampu button:hover,.musik button:hover,.tombolBanner button:hover,
 .tombolBalon button:hover,
@@ -666,14 +652,14 @@ audio{
 }
 
 .isiSurat{
-    height: 400px;
     width: 100%;
     line-height: 2;
-    margin-right: -200px;
+    margin-right: -180px;
 }
 
+
 .isiSurat p{
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 10px;
 }
 .luar{
@@ -806,8 +792,8 @@ audio{
     right: 0px;
     margin-top: 50px;
     position: absolute;
-    text-align: center;
     animation: penutupIsi 5s;
+    text-align: center;
 }
 
 @keyframes penutupGambar {
@@ -856,7 +842,6 @@ audio{
 /* Mobile 414 */
 @media screen and (max-width : 414px){
     .birthday1{
-        border: 1px solid green;
         background-image: url("gambar/birthday\ \(5\).jpg");
 
     }
@@ -875,6 +860,14 @@ audio{
         width: 110px;
     }
 
+    .banner{
+        right: 100px;
+    }
+
+    .banner img{
+        width: 200px;
+    }
+
 
 
     /* Lampu */
@@ -886,41 +879,12 @@ audio{
     .bukaSurat button,
     .penutupAkhir button
     {
-        margin-bottom: 220px;
         padding: 10px;
         font-size: 16px;
     }
 
-    .tombolLampu button{
-        left: 135px;
-    }
-
-    .musik button{
-        left: 80px;
-    }
-
-    .tombolBanner button{
-        left: 125px;
-    }
-
-    .banner{
-        right: 110px;
-    }
-
-    .banner img{
-        width: 200px;
-    }
-
-    .tombolBalon button{
-        left: 130px;
-    }
-
-    .tombolKue button{
-        left: 140px;
-    }
-
-    .tiupLilin button{
-        left: 165px;
+    .tombolWadah{
+        margin-top: 150px;
     }
 
     .isiBalon img{
@@ -1060,15 +1024,6 @@ audio{
         height: 150px;
         display: none;
     }
-
-    .tombolKartu button{
-        left:110px;
-    }
-
-    .bukaSurat button{
-        left: 155px;
-
-    }
     
     .luar p{
         font-size: 10px;
@@ -1153,7 +1108,7 @@ audio{
 }
 
 .isiSurat p{
-    top:-45px;
+    top:-40px;
     position: absolute;
 }
 
@@ -1267,21 +1222,13 @@ audio{
     .bukaSurat button,
     .penutupAkhir button
     {
-        margin-bottom: 30px;
+        top: 200px;
         padding: 10px;
         font-size: 16px;
     }
 
-    .tombolLampu button{
-        left: 105px;
-    }
-
-    .musik button{
-        left: 50px;
-    }
-
-    .tombolBanner button{
-        left: 95px;
+    .tombolWadah{
+        margin-top:100px ;
     }
 
     .banner{
@@ -1290,18 +1237,6 @@ audio{
 
     .banner img{
         width: 200px;
-    }
-
-    .tombolBalon button{
-        left: 105px;
-    }
-
-    .tombolKue button{
-        left: 110px;
-    }
-
-    .tiupLilin button{
-        left: 135px;
     }
 
     .isiBalon img{
@@ -1434,15 +1369,6 @@ audio{
         display: none;
     }
 
-    .tombolKartu button{
-        left: 80px;
-    }
-
-    .bukaSurat button{
-        left: 125px;
-
-    }
-    
     .luar p{
         font-size: 10px;
         text-transform: uppercase;
@@ -1521,13 +1447,14 @@ audio{
 .isiSurat{
     width: 100%;
     height: 100%;
-    font-size: 7px;
-    line-height: 7px;
+    font-size: 6.4px;
+    line-height: 6.4px;
+    position: relative;
 }
 
 .isiSurat p{
-    top:-45px;
     position: absolute;
+    top: -40px;
 }
 
 @keyframes kartuUcapan {
@@ -1578,6 +1505,7 @@ audio{
             font-size: 20px;
             animation: penutupIsi 5s;
             right: 136px;
+            top:220px;
         }
 
     @keyframes penutupIsi {

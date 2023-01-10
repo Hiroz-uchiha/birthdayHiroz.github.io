@@ -1,11 +1,19 @@
 const container1 = document.querySelector(".container1")
 
-        const birthday1 = document.querySelector(".birthday1 button")
+const birthday1 = document.querySelector(".birthday1 button")
 
-        birthday1.addEventListener("click",function(){
-            setTimeout(function(){
-                container1.style.display = "none"
-            },100)
+
+
+birthday1.addEventListener("click",function(){
+    setTimeout(function(){
+        container1.style.display = "none"
+    },100)
+    
+        const tombolWadah = document.createElement("div")
+        tombolWadah.classList.add("tombolWadah")
+        const tombolLampu = document.createElement("div")
+        tombolLampu.classList.add("tombolLampu")    
+        tombolWadah.appendChild(tombolLampu)
 
         const cahaya = document.querySelector(".cahaya")
         const container = document.querySelector(".container")
@@ -20,8 +28,6 @@ const container1 = document.querySelector(".container1")
 
         const isiSurat = document.querySelector(".isiSurat")
 
-            const tombolLampu = document.createElement("div")
-            tombolLampu.classList.add("tombolLampu")
 
             const btnLampu = document.createElement("button")
             const teksLampu = document.createTextNode("Nyalakan Lampu")
@@ -30,7 +36,7 @@ const container1 = document.querySelector(".container1")
             tombolLampu.appendChild(btnLampu)
 
         setTimeout(function(){
-            container.appendChild(tombolLampu)
+            container.appendChild(tombolWadah)
         },1250)
 
 
@@ -38,15 +44,20 @@ const container1 = document.querySelector(".container1")
             cahaya.classList.add("cahayaBuka")
             tombolLampu.remove()
 
+            const tombolWadah = document.createElement("div")
+            tombolWadah.classList.add("tombolWadah")
+    
             const dmus = document.createElement("div")
             dmus.classList.add("musik")
+            tombolWadah.appendChild(dmus)
+
             const mbutton = document.createElement("button")
             const tksMusik = document.createTextNode("Mainkan Musik Spesial Untukmu!")
             mbutton.appendChild(tksMusik)
             dmus.appendChild(mbutton)
 
             setTimeout(function(){
-                container.appendChild(dmus)
+                container.appendChild(tombolWadah)
             },6000)
 
             setTimeout(function(){
@@ -96,32 +107,40 @@ const container1 = document.querySelector(".container1")
                 audio.play()
                 dmus.style.display = "none"
             
-                
+                const tombolWadah = document.createElement("div")
+                tombolWadah.classList.add("tombolWadah")
+                        
                 const tombolBanner = document.createElement("div")
                 tombolBanner.classList.add("tombolBanner")
                 const bannBt= document.createElement("button")
                 const tksBanner = document.createTextNode("Mari Kita Menghias")
                 bannBt.appendChild(tksBanner)
                 tombolBanner.appendChild(bannBt)
-    
+                tombolWadah.appendChild(tombolBanner)
+
+
                 setTimeout(function(){
-                    container.appendChild(tombolBanner)
+                    container.appendChild(tombolWadah)
                     container.style.transition = "1s"
                 },5000)
     
-            
+
+                const tombolWadah1 = document.createElement("div")
+                tombolWadah1.classList.add("tombolWadah1")
+                    
                 const banner = document.createElement("div")
                 banner.classList.add("banner")
-
+                
                 const gbrBanner = document.createElement("img")
                 gbrBanner.setAttribute("src","gambar/banner.png")
                 banner.appendChild(gbrBanner)
+                tombolWadah1.appendChild(banner)
 
             
             
             
             tombolBanner.addEventListener("click",function(){
-                container.appendChild(banner)
+                container.appendChild(tombolWadah1)
                 tombolBanner.remove()
 
 
