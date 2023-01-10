@@ -137,7 +137,7 @@
 }
 
 .tombolBanner button {
-    left: 44%;
+    left: 43%;
 }
 
 .tombolBalon button {
@@ -886,7 +886,7 @@ audio{
     .bukaSurat button,
     .penutupAkhir button
     {
-        margin-bottom: 30px;
+        margin-bottom: 220px;
         padding: 10px;
         font-size: 16px;
     }
@@ -1204,7 +1204,7 @@ audio{
     }
  
     .penutup .teksPenutup{
-            bottom: -600px;
+            bottom: -650px;
             font-size: 20px;
             animation: penutupIsi 5s;
             right: 114px;
@@ -1575,7 +1575,6 @@ audio{
     }
  
     .penutup .teksPenutup{
-            bottom: -600px;
             font-size: 20px;
             animation: penutupIsi 5s;
             right: 136px;

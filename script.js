@@ -202,13 +202,23 @@ const container1 = document.querySelector(".container1")
                         tiupLilin.remove()
 
                         const nama = document.querySelector(".nama");
+                        const namaVal = nama.value;
                         const par = document.createElement("p")
                         const teksPesan = document.createTextNode(`Selamat ulang tahun buat ${nama.value} 🥳 Semoga hari ini menjadi hari yang indah seperti kaca mata yang indah yang selalu kamu pakai.Selain kesehatan, keselamatan, dan kebahagiaan yang ku doakan untukmu, traktiran dan makan-makan adalah hal penting lain yang selalu aku tunggu 😅😅😅.`)
                         par.appendChild(teksPesan)
 
-                        
-                        isiSurat.appendChild(par)
 
+                        const par2 = document.createElement("p")
+                        const teksPesan2 = document.createTextNode(`Saya tidak tahu nama anda karena tadi anda tidak memasukan nama.Tapi saya mengucapkan selamat ulang tahun 🥳🥳 semoga anda bisa mengingat kembali untuk mengisi nama terlebih dahulu sebelum memasuki pesta`)
+                        par2.appendChild(teksPesan2)
+                        
+                        
+                        if(namaVal === ""){
+                            isiSurat.appendChild(par2)
+                        }else{
+                            isiSurat.appendChild(par)
+                        }
+                        
                         const tombolKartu = document.createElement("div")
                         tombolKartu.classList.add("tombolKartu")
 
@@ -273,15 +283,31 @@ const container1 = document.querySelector(".container1")
                             
                             const teksPenutup = document.querySelector(".teksPenutup")
                             const penutupTeks = document.createElement("p")
-                            const penutupPesan = document.createTextNode(`Sekali lagi saya Ucapkan Selamat Ulang Tahun kepada ${nama.value} Semoga apa yang diharapkan bisa tercapai.Motivasi "Jangan pernah menyesali sehari dalam hidup anda,karena anda bisa menyesali seluruhnya.`)
+                            const penutupPesan = document.createTextNode(`Sekali lagi saya Ucapkan Selamat Ulang Tahun kepada ${nama.value} 🥳🥳🥳.Semoga apa yang diharapkan bisa tercapai.Motivasi "Jangan pernah menyesali sehari dalam hidup anda,karena anda bisa menyesali seluruhnya.😄😅`)
                             const byP = document.createElement("p")
                             const byPesan = document.createTextNode("-By Manusia Helem")
                             byP.appendChild(byPesan)
+
+                            
+                            const penutupTeks2 = document.createElement("p")
+                            const penutupPesan2 = document.createTextNode(`Sekali lagi saya Ucapkan Selamat Ulang Tahun untuk anda siapapun itu 🥳.Semoga kedepannya anda jadi lebih baik dalam menjalani hidup.`)
+                            const byP2 = document.createElement("p")
+                            const byPesan2 = document.createTextNode("-By Manusia Helem")
+                            byP2.appendChild(byPesan2)
+
         
                             penutupAkhir.addEventListener("click",function(){
+                                if(namaVal === ""){
+                                    penutupTeks2.appendChild(penutupPesan2)
+                                    penutupTeks2.appendChild(byP2)
+                                    teksPenutup.appendChild(penutupTeks2)
+                                }
+                                else{
                                     penutupTeks.appendChild(penutupPesan)
                                     penutupTeks.appendChild(byP)
                                     teksPenutup.appendChild(penutupTeks)
+                                }
+
                                     kartuUcapan.style.display = "none"
                                     gbrBalon.style.display = "none"
                                     banner.style.display = "none"
