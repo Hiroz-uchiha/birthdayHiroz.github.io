@@ -830,6 +830,350 @@ audio{
 
 
 
+/* Mobile 428 */
+@media screen and (max-width : 428px){
+    .birthday1{
+        background-image: url("gambar/birthday\ \(5\).jpg");
+
+    }
+
+    .birthday1 input[type="text"]{
+        padding: 8px;
+        font-size: 20px;
+        margin-top: 100px;
+        border-radius: 10px;
+        width: 80%;
+    }
+
+    .birthday1 button{
+        padding: 5px;
+        font-size: 18px;
+        width: 110px;
+    }
+
+    .banner{
+        right: 110px;
+    }
+
+    .banner img{
+        width: 200px;
+    }
+
+
+
+    /* Lampu */
+    .tombolLampu button,.musik button,.tombolBanner button,
+    .tombolBalon button,
+    .tombolKue button,
+    .tiupLilin button,
+    .tombolKartu button,
+    .bukaSurat button,
+    .penutupAkhir button
+    {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .tombolWadah{
+        margin-top: 150px;
+    }
+
+    .isiBalon img{
+        height: 400px;
+        bottom: 335px;
+        position: absolute;
+        animation: balonGerak 10s;
+        top: 0;
+    }
+
+    @keyframes balonGerak {
+        0%{
+            top: 1000px;
+            opacity: 0;
+        }
+        
+        100%{
+            opacity: .6;
+            top: 0;
+        }
+    }
+
+
+    .soBalon{
+        right: 290px;
+        width: 110px;
+        padding: 0;
+        bottom: 320px;
+        animation: balonSmall 10s;
+        position: absolute;
+        height: 300px;
+        top: 250px;
+    }
+
+    .soBalon2{
+        left: 300px;
+        width: 110px;
+        padding: 0;
+        bottom: 320px;
+        animation: balonSmall 10s;
+        height: 300px;
+        top: 250px;
+    }
+
+    .soBalon img,
+    .soBalon img:nth-child(even),
+    .soBalon2 img,
+    .soBalon2 img:nth-child(even)
+    {
+        width: 50px;
+    }
+
+    
+@keyframes balonSmall{
+    0%{
+        top: 1000px;
+    }
+
+    100%{
+        top: 250px;
+    }
+}
+
+
+
+    /* Kue */
+    .Kue{
+        top: -100px;
+    }
+
+
+    .cake{
+        width: 120px;
+        left: 87px;
+        height: 50px;
+    }
+
+    .c1{
+        bottom: 33px ;
+    }
+
+    .icing>div{
+        width: 38px;
+        height: 15px;
+        border-radius: 0 0 25px 25px;
+        margin-left: 3px;
+    }
+
+    .icing>div:nth-child(5),
+    .icing>div:nth-child(6),
+    .icing>div:nth-child(7),
+    .cherries>div:nth-child(5),
+    .cherries>div:nth-child(6),
+    .cherries>div:nth-child(7)
+    {
+        display: none;
+    }
+    
+    .c2{
+        bottom: 75px;
+    }
+
+    .candle{
+        width: 15px;
+        height: 70px;
+        top:-20px;
+        z-index: -1;
+    }
+
+
+    
+    .kue2{
+        animation: kueGerak2 3s;
+        opacity: 0;
+    }
+
+    @keyframes kueGerak2 {
+        0%{
+            opacity: 1;
+            right: 0px;
+        }
+
+        100%{
+            opacity: 0;
+            left: -500px;
+        }
+        
+    }
+
+
+
+
+    /* Kartu Ucapan */
+    .kartuUcapan{
+        width : 220px;
+        right:90px;
+        height: 150px;
+        display: none;
+    }
+    
+    .luar p{
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        text-align: center;
+        letter-spacing: 2px;
+        color:#000046 ;
+    }
+        
+
+    .layarTop,
+    .layarMiddle,
+    .layarBottom{
+        height: 25px;
+        width: 60px;
+        background-repeat: repeat;
+        background-size:8px 100px;
+        background-position: 28px 0;
+        background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 20px,
+        #fedbab 30px,
+        transparent 80px
+        ),
+        radial-gradient(circle at 30px 0,#994c10 30px,#fcbf29 31px);
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        margin: auto;
+    }
+    
+    
+    .layarMiddle{
+        transform: scale(0.85);
+        top: 20px;
+    }
+
+    .layarTop{
+        transform: scale(0.7);
+        top: 26px;
+    }
+
+    .layarBottom{
+        top: 17px;
+    }
+
+    
+.lilinSurat{
+    height: 25px;
+    width: 5px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+    );
+    position: absolute;
+    margin: auto;
+    bottom: 40px;
+    z-index: -1;
+}
+
+
+.lilinSurat:before{
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 30px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+    
+.isiSurat{
+    width: 100%;
+    height: 100%;
+    font-size: 8px;
+    line-height: 8px;
+}
+
+.isiSurat p{
+    top:-40px;
+    position: absolute;
+}
+
+@keyframes kartuUcapan {
+    0%{
+        opacity: 0;
+        right: -500px;
+    }
+
+    100%{
+        opacity: 1;
+        right: 90px;
+    }
+    
+}
+
+
+
+    .penutupAkhir button{
+        left: 150px;
+    }
+
+    .penutup{
+        display: none;
+        flex-direction: column;
+        width: 500px;
+    }
+
+    .penutup .gambarPenutup img{
+        width: 220px;
+        height: 350px;
+        animation: penutupGambar 5s;
+        left: 62px;
+        margin-top: 5px;
+    }
+    
+    
+    @keyframes penutupGambar {
+        0%{
+            left: 300px;
+            opacity: 0;
+        }
+
+        100%{
+            left: 62px;
+            opacity: 1;
+        }
+    }
+ 
+    .penutup .teksPenutup{
+            bottom: -650px;
+            font-size: 20px;
+            animation: penutupIsi 5s;
+            right: 114px;
+        }
+
+    @keyframes penutupIsi {
+        0%{
+            right: -300px;
+            opacity: 0;
+        }
+
+        100%{
+            right: 114px;
+            opacity: 1;
+        }
+    }
+
+}
+
+
+
+
+
 
 
 
